@@ -343,6 +343,7 @@ p {
   padding: 8px 16px;
   border-radius: 5px;
   box-shadow: 5px 5px 15px $LightGray;
+  grid-column-start: 2;
 }
 .confirmBtn {
   background-color: $PurplishBlue;
@@ -520,6 +521,7 @@ p {
     padding: 8px 16px;
     border-radius: 5px;
     box-shadow: 5px 5px 15px $LightGray;
+    grid-column-start: 2;
   }
   .inputLabel > input:hover {
     border: 1px solid $PurplishBlue;
