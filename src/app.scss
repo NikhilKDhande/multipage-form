@@ -1,0 +1,612 @@
+@import url("https://fonts.google.com/specimen/Ubuntu");
+//Color variable
+$White: #ffffff;
+$Alabaster: #fafbff;
+$Magnolia: #f0f6ff;
+$LightGray: #d6d9e6;
+$CoolGray: #9699ab;
+$StrawberryRed: #ed3548;
+$LightBlue: #bfe2fd;
+$PastelBlue: #adbeff;
+$PurplishBlue: #473dff;
+$MarineBlue: #02295a;
+$BoldWt: 700;
+$MediumWt: 500;
+$RegularWt: 400;
+* {
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  size: 16px;
+}
+body {
+  background-color: $Magnolia;
+}
+h1 {
+  font-size: 48px;
+}
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 32px;
+}
+h4 {
+  font-size: 28px;
+}
+h5 {
+  font-size: 24px;
+}
+h6 {
+  font-size: 18px;
+}
+p {
+  font-size: 16px;
+}
+.sidebar {
+  width: 350px;
+  height: 750px;
+  background-image: url("./images/bg-sidebar-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: 350px 750px;
+  padding: 36px;
+  color: $White;
+}
+.formStepsContainer {
+  margin: 24px 12px;
+  display: flex;
+  align-items: center;
+}
+.formStepsHeadingActive {
+  width: 48px;
+  height: 48px;
+  border: 1px solid $LightBlue;
+  background-color: $LightBlue;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 24px;
+  padding: 11px;
+  font-weight: $BoldWt;
+}
+.formStepsHeadingNormal {
+  width: 48px;
+  height: 48px;
+  border: 1px solid $LightBlue;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 24px;
+  padding: 11px;
+  font-weight: $BoldWt;
+}
+
+.formStepsName {
+  margin: 0px 16px;
+}
+.formStepsName > p {
+  letter-spacing: 1.25px;
+  line-height: 140%;
+  margin: 4px 0;
+  font-weight: $RegularWt;
+  color: $LightGray;
+}
+.formStepsName > h6 {
+  letter-spacing: 2.5px;
+  line-height: 140%;
+  margin: 4px 0;
+  font-weight: $BoldWt;
+}
+.main {
+  width: 1250px;
+  margin: 0 auto;
+  margin-top: 10%;
+  padding: 24px;
+  background-color: $White;
+  height: 800px;
+  border-radius: 16px;
+  display: flex;
+  gap: 95px;
+}
+.mainForm {
+  margin: 24px 0;
+  padding-top: 48px;
+  width: 50%;
+  position: relative;
+}
+.Step1 > h1,
+.Step2 > h1,
+.Step3 > h1,
+.Step4 > h1,
+.thankyouPage > h1 {
+  letter-spacing: 1.5px;
+  color: $MarineBlue;
+}
+.Step1 > h6,
+.Step2 > h6,
+.Step3 > h6,
+.Step4 > h6,
+.thankyouPage > h6 {
+  letter-spacing: 1.25px;
+  color: $CoolGray;
+  margin-bottom: 48px;
+  font-weight: $RegularWt;
+}
+.inputLabel {
+  padding: 8px;
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: auto auto;
+  color: $MarineBlue;
+  gap: 8px;
+  font-weight: $MediumWt;
+}
+.inputLabel > span {
+  text-align: right;
+  padding-right: 8px;
+  color: $StrawberryRed;
+  font-weight: $BoldWt;
+}
+.inputLabel > input {
+  border: 1px solid $LightGray;
+  height: 48px;
+  border-radius: 5px;
+  padding-left: 16px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.inputLabel > input:hover {
+  border: 1px solid $PurplishBlue;
+}
+.inputLabel > input::placeholder {
+  color: $CoolGray;
+  font-size: 16px;
+}
+.cardContainer {
+  display: flex;
+  gap: 24px;
+}
+.cardMonth {
+  width: 150px;
+  height: 192px;
+  position: relative;
+  border-radius: 10px;
+  border: 2px solid $LightGray;
+}
+.cardMonth > input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 192px;
+  opacity: 0;
+  cursor: pointer;
+}
+.cardMonth > div > img {
+  margin-bottom: 48px;
+}
+.cardMonth > div {
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+
+  border-radius: 10px;
+}
+
+.cardMonthActive {
+  border: 2px solid $PurplishBlue;
+  background-color: $Magnolia;
+}
+.cardMonth:hover {
+  border: 2px solid $PurplishBlue;
+}
+
+.cardMonth > div > p {
+  color: $MarineBlue;
+  line-height: 140%;
+}
+.cardMonth > div > p > span {
+  color: $CoolGray;
+}
+
+.toggleBtnContainer {
+  width: 526px;
+  height: 40px;
+  margin: 24px 0;
+  background-color: $Alabaster;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.activePlanType {
+  color: $MarineBlue;
+}
+.normalPlan {
+  color: $CoolGray;
+}
+
+.toggleIcon {
+  border: none;
+  background: none;
+  padding: 8px 8px;
+  font-size: 24px;
+}
+.addOnContainer {
+  border: 2px solid $CoolGray;
+  width: 80%;
+  border-radius: 5px;
+  display: flex;
+  gap: 24px;
+  padding: 14px 24px;
+  align-items: center;
+  margin: 24px 16px;
+}
+.activeAddons {
+  border: 2px solid $PurplishBlue;
+  background-color: $Magnolia;
+}
+.activeAddonsl:hover {
+  border: 2px solid $PastelBlue;
+}
+.addOnContainer > label {
+  display: grid;
+  justify-content: start;
+  column-gap: 24px;
+  row-gap: 2px;
+  width: 100%;
+  color: $MarineBlue;
+  font-weight: $MediumWt;
+}
+.addOnContainer > label > input {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  width: 18px;
+}
+.addOnContainer > label > span {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  color: $CoolGray;
+  font-weight: $MediumWt;
+}
+.addOnContainer > p {
+  color: $PurplishBlue;
+  font-weight: $MediumWt;
+}
+
+.addOnContainer:hover {
+  border: 1px solid $PurplishBlue;
+}
+.checkoutList {
+  background-color: $Magnolia;
+  border-radius: 8px;
+  padding: 24px;
+}
+.checkoutAddon {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+.checkoutAddon > p:first-child {
+  color: $CoolGray;
+  font-weight: $MediumWt;
+}
+.checkoutAddon > p:last-child {
+  color: $MarineBlue;
+}
+.checkoutPlan {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  align-items: center;
+}
+.checkoutPlan > p:last-child {
+  color: $MarineBlue;
+  font-weight: $BoldWt;
+}
+.totalPrice {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  padding: 24px;
+}
+.totalPrice > p,
+.checkoutPlan > p {
+  color: $CoolGray;
+  font-weight: $MediumWt;
+}
+.totalPrice > h5 {
+  color: $PurplishBlue;
+}
+.btnContainer {
+  display: grid;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+}
+.backBtn {
+  background-color: $Alabaster;
+  font-size: 24px;
+  font-weight: $MediumWt;
+  color: $CoolGray;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px $LightGray;
+}
+.nextBtn {
+  background-color: $MarineBlue;
+  font-size: 24px;
+  font-weight: $MediumWt;
+  color: $White;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px $LightGray;
+}
+.confirmBtn {
+  background-color: $PurplishBlue;
+  font-size: 24px;
+  font-weight: $MediumWt;
+  color: $White;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px $LightGray;
+}
+.thankyouPage {
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 20%;
+}
+.thankyouPage > h1,
+.thankyouPage > h6 {
+  margin-top: 16px;
+}
+@media screen and (max-width: 375px) {
+  h1 {
+    font-size: 28px;
+  }
+  h5 {
+    font-size: 24px;
+  }
+  h6 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 14px;
+  }
+  .main {
+    width: 375px;
+    z-index: 2;
+    margin: 0 auto;
+    margin-top: 0;
+    padding: 0;
+    background-color: $Magnolia;
+    height: 800px;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 0;
+  }
+  .sidebar {
+    width: 375px;
+    height: 172px;
+    background-image: url("./images/bg-sidebar-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: 375px 172px;
+    padding: 0 auto;
+    color: $White;
+    display: flex;
+    justify-content: center;
+    z-index: 0;
+  }
+  .formStepsContainer {
+    margin: 24px 12px;
+    display: flex;
+    align-items: center;
+  }
+  .formStepsName {
+    display: none;
+    margin: 0px 16px;
+  }
+  .formStepsHeadingActive {
+    width: 36px;
+    height: 36px;
+    border: 1px solid $LightBlue;
+    background-color: $LightBlue;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 18px;
+    padding: 8px;
+    font-weight: $BoldWt;
+  }
+  .formStepsHeadingNormal {
+    width: 36px;
+    height: 36px;
+    border: 1px solid $LightBlue;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 18px;
+    padding: 8px;
+    font-weight: $BoldWt;
+  }
+  .mainForm {
+    z-index: 0;
+    background-color: transparent;
+    width: 375px;
+    border-radius: 8px;
+    position: absolute;
+    height: 95%;
+  }
+
+  .Step1,
+  .Step2,
+  .Step3,
+  .Step4,
+  .thankyouPage {
+    margin-top: 64px;
+    padding: 36px 24px 16px 24px;
+    z-index: 4;
+    background-color: $White;
+    width: 360px;
+    position: absolute;
+    border-radius: 8px;
+    height: max-content;
+    margin-left: 8px;
+    box-shadow: 5px 5px 25px $LightGray;
+  }
+
+  .Step1 > h1,
+  .Step2 > h1,
+  .Step3 > h1,
+  .Step4 > h1,
+  .thankyouPage > h1 {
+    letter-spacing: 1.5px;
+    color: $MarineBlue;
+  }
+  .Step1 > h6,
+  .Step2 > h6,
+  .Step3 > h6,
+  .Step4 > h6,
+  .thankyouPage > h6 {
+    letter-spacing: 1.25px;
+    color: $CoolGray;
+    margin-bottom: 24px;
+    font-weight: $RegularWt;
+  }
+  .btnContainer {
+    display: grid;
+    width: 100%;
+    height: 72px;
+    position: absolute;
+    bottom: 0px;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $White;
+    padding: 8px 16px;
+    box-shadow: -5px -5px 20px $LightGray;
+  }
+  .backBtn {
+    background-color: $Alabaster;
+    font-size: 18px;
+    font-weight: $MediumWt;
+    color: $CoolGray;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px $LightGray;
+  }
+
+  .confirmBtn {
+    background-color: $PurplishBlue;
+    font-size: 18px;
+    font-weight: $MediumWt;
+    color: $White;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px $LightGray;
+  }
+  .nextBtn {
+    background-color: $MarineBlue;
+    font-size: 18px;
+    font-weight: $MediumWt;
+    color: $White;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px $LightGray;
+  }
+  .inputLabel > input:hover {
+    border: 1px solid $PurplishBlue;
+  }
+  .inputLabel > input::placeholder {
+    color: $CoolGray;
+    font-size: 14px;
+  }
+  .cardContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .cardMonth {
+    width: 300px;
+    height: max-content;
+    position: relative;
+    border-radius: 10px;
+    display: flex;
+  }
+  .cardMonth > input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 74px;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .cardMonth > div > img {
+    margin-bottom: 0;
+  }
+  .cardMonth > div {
+    width: 300px;
+    height: auto;
+    padding: 16px;
+    border: 2px solid $LightGray;
+    justify-content: left;
+    display: flex;
+    gap: 24px;
+    border-radius: 10px;
+    align-items: center;
+  }
+  .cardMonth > div > p {
+    color: $MarineBlue;
+    line-height: 140%;
+  }
+  .cardMonth > div > p > span {
+    color: $CoolGray;
+  }
+  .toggleBtnContainer {
+    width: 300px;
+    height: 40px;
+    margin: 24px 0;
+    background-color: $Alabaster;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
+  .addOnContainer {
+    border: 2px solid $LightGray;
+    width: 300px;
+    border-radius: 5px;
+    display: flex;
+    gap: 12px;
+    padding: 14px 16px;
+    align-items: center;
+    margin: 24px 8px;
+  }
+  .addOnContainer:hover {
+    border: 2px solid $PastelBlue;
+  }
+  .addOnContainer > label {
+    font-size: 14px;
+    display: grid;
+    justify-content: start;
+    column-gap: 12px;
+    row-gap: 2px;
+    width: 100%;
+    color: $MarineBlue;
+    font-weight: $MediumWt;
+  }
+  .addOnContainer > label > input {
+    width: 14px;
+  }
+  .totalPrice > h5 {
+    font-size: 18px;
+  }
+}
